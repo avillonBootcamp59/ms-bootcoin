@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -39,5 +39,5 @@ jobs:
             -Dsonar.host.url="https://sonarcloud.io" \
             -Dsonar.organization=avillonbootcamp59 \
             -Dsonar.projectKey=avillonBootcamp59_ms-bootcoin \
-            -Dsonar.branch.name=master \
+            -Dsonar.branch.name=main \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
