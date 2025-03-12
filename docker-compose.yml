@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   zookeeper:
@@ -11,6 +10,8 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:latest
+    networks:
+      - kafka-network
     container_name: kafka
     depends_on:
       - zookeeper
@@ -32,6 +33,7 @@ services:
   ms-bootcoin:
     build: .
     container_name: ms-bootcoin
+    image: ms-bootcoin-ms-bootcoin:latest
     depends_on:
       - kafka
       - redis
