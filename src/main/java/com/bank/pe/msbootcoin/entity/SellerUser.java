@@ -1,7 +1,8 @@
-package com.bank.pe.msbootcoin.domain;
+package com.bank.pe.msbootcoin.entity;
 
-import com.bank.pe.msbootcoin.entity.Customer;
+import com.bank.pe.msbootcoin.dto.Customer;
 import lombok.*;
+import org.bson.codecs.pojo.annotations.BsonId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,9 +16,9 @@ import java.time.LocalDate;
 @Builder
 public class SellerUser {
 
-    @Id
+    @BsonId
     private String id;
-    private Customer customer;
+    private String idCustomer;
     private LocalDate dateReg;
     private String idYanki;
 

@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.service.impl;
 
-import com.bank.pe.msbootcoin.domain.SellerUser;
+import com.bank.pe.msbootcoin.entity.SellerUser;
 import com.bank.pe.msbootcoin.repository.SellerUserBcRepository;
 import com.bank.pe.msbootcoin.service.SellerUserBcService;
 import org.springframework.beans.factory.annotation.Autowired;

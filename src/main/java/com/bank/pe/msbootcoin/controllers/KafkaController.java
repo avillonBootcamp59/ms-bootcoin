@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(value = "/api/v1/kafka")
+@RequestMapping(value = "/kafka")
 public class KafkaController {
 
     Logger logger = LoggerFactory.getLogger(KafkaController.class);

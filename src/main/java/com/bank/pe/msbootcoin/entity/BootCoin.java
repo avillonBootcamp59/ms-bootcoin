@@ -2,7 +2,6 @@ package com.bank.pe.msbootcoin.entity;
 
 import lombok.*;
 import org.bson.codecs.pojo.annotations.BsonId;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;

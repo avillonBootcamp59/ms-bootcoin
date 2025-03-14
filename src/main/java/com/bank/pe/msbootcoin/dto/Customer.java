@@ -1,4 +1,4 @@
-package com.bank.pe.msbootcoin.entity;
+package com.bank.pe.msbootcoin.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

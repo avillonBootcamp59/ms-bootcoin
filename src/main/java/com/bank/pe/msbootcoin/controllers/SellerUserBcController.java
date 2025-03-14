@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.controllers;
 
-import com.bank.pe.msbootcoin.domain.SellerUser;
+import com.bank.pe.msbootcoin.entity.SellerUser;
 import com.bank.pe.msbootcoin.service.SellerUserBcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping(value = "/sellerUserBc")
+@RequestMapping(value = "/api/v1/sellerUserBc")
 public class SellerUserBcController {
     final Logger logger = LoggerFactory.getLogger(SellerUserBcController.class);
 
@@ -22,32 +22,23 @@ public class SellerUserBcController {
 
     @GetMapping("/all")
     public Flux<SellerUser> getAll(){
-
-        logger.info("Mostrando la lista de los SellerUser de la bd");
         return sellerUserBcService.findAll();
     }
 
     @GetMapping("/{id}")
     public Mono<SellerUser> findTasasBC(@PathVariable String id){
-
-        logger.info("Buscando al SellerUser por el id: {}", id);
         return sellerUserBcService.findById(id);
     }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<SellerUser> save(@RequestBody SellerUser clientMono){
-
-        logger.info("Registrando al SellerUser en la bd");
         clientMono.setDateReg(LocalDate.now());
         return sellerUserBcService.save(clientMono);
     }
 
     @PutMapping("/{id}")
     public Mono<SellerUser> edit(@RequestBody SellerUser client, @PathVariable String id){
-
-        logger.info("Editando al SellerUser con el id: {}" ,id);
-
         return sellerUserBcService.findById(id).flatMap(c -> {
             c = client;
 

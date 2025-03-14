@@ -3,7 +3,6 @@ package com.bank.pe.msbootcoin.producer;
 import com.bank.pe.msbootcoin.entity.BootCoin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +17,7 @@ public class KafkaStringProducer {
     }
 
     public void sendMessage(BootCoin message) {
-        LOGGER.info("Produciendo mensaje BootCoin para usuario: {}", message.getIdCustomer());
+        LOGGER.info("Enviando mensaje para customer: {}", message.getIdCustomer());
         this.kafkaTemplate.send("bootcamp-Topic", message);
     }
 }

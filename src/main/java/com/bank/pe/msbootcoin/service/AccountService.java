@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.service;
 
-import com.bank.pe.msbootcoin.entity.Account;
+import com.bank.pe.msbootcoin.dto.Account;
 import reactor.core.publisher.Mono;
 
 public interface AccountService {

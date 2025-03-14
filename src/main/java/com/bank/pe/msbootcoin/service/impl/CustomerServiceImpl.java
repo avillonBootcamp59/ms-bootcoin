@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.service.impl;
 
-import com.bank.pe.msbootcoin.entity.Customer;
+import com.bank.pe.msbootcoin.dto.Customer;
 import com.bank.pe.msbootcoin.CustomerConfig;
 import com.bank.pe.msbootcoin.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;

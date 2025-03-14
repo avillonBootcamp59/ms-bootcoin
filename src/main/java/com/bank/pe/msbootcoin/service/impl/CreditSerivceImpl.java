@@ -1,7 +1,7 @@
 package com.bank.pe.msbootcoin.service.impl;
 
 import com.bank.pe.msbootcoin.CreditConfig;
-import com.bank.pe.msbootcoin.entity.Credit;
+import com.bank.pe.msbootcoin.dto.Credit;
 import com.bank.pe.msbootcoin.service.CreditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
