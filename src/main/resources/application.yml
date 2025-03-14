@@ -1,0 +1,33 @@
+server:
+  port: 8087
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/bankdb
+
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group_id
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  # Endpoints de microservicios
+endpoint:
+  accounts: http://localhost:8080/api/accounts
+  credits: http://localhost:8080/api/v1/credits
+  customer: http://localhost:8080/api/v1/customers

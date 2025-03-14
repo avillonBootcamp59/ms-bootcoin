@@ -18,7 +18,7 @@ public class SellerUser {
 
     @BsonId
     private String id;
-    private Customer customer;
+    private String idCustomer;
     private LocalDate dateReg;
     private String idYanki;
 
