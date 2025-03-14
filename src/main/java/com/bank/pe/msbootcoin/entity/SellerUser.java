@@ -1,6 +1,6 @@
-package com.bank.pe.msbootcoin.domain;
+package com.bank.pe.msbootcoin.entity;
 
-import com.bank.pe.msbootcoin.entity.Customer;
+import com.bank.pe.msbootcoin.dto.Customer;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

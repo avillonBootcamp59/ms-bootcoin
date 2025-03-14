@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.controllers;
 
-import com.bank.pe.msbootcoin.domain.SellerUser;
+import com.bank.pe.msbootcoin.entity.SellerUser;
 import com.bank.pe.msbootcoin.service.SellerUserBcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping(value = "/sellerUserBc")
+@RequestMapping(value = "/api/v1/sellerUserBc")
 public class SellerUserBcController {
     final Logger logger = LoggerFactory.getLogger(SellerUserBcController.class);
 

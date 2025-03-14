@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.service;
 
-import com.bank.pe.msbootcoin.domain.Maestro;
+import com.bank.pe.msbootcoin.entity.Maestro;
 import com.bank.pe.msbootcoin.repository.MaestroRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

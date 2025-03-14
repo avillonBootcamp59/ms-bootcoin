@@ -69,12 +69,20 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/ms-bootcoin:latest .
           docker tag ${{ secrets.DOCKER_USERNAME }}/ms-bootcoin:latest ${{ secrets.DOCKER_USERNAME }}/ms-bootcoin:${{ github.run_number }}
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/redis:latest ./redis
+          docker tag ${{ secrets.DOCKER_USERNAME }}/redis:latest ${{ secrets.DOCKER_USERNAME }}/redis:${{ github.run_number }}
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/kafka:latest ./kafka
+          docker tag ${{ secrets.DOCKER_USERNAME }}/kafka:latest ${{ secrets.DOCKER_USERNAME }}/kafka:${{ github.run_number }}
 
       # Subir la imagen a Docker Hub
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/ms-bootcoin:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/ms-bootcoin:${{ github.run_number }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/redis:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/redis:${{ github.run_number }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/kafka:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/kafka:${{ github.run_number }}
 
       # Cerrar sesión en Docker Hub
       - name: Logout from Docker Hub

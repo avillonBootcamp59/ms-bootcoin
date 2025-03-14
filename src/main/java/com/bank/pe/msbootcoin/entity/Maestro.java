@@ -1,4 +1,4 @@
-package com.bank.pe.msbootcoin.domain;
+package com.bank.pe.msbootcoin.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

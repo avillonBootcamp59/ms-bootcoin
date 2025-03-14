@@ -1,6 +1,6 @@
 package com.bank.pe.msbootcoin.service;
 
-import com.bank.pe.msbootcoin.domain.SellerUser;
+import com.bank.pe.msbootcoin.entity.SellerUser;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

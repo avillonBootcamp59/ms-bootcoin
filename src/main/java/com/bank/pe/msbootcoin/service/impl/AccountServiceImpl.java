@@ -1,7 +1,7 @@
 package com.bank.pe.msbootcoin.service.impl;
 
 import com.bank.pe.msbootcoin.AccountConfig;
-import com.bank.pe.msbootcoin.entity.Account;
+import com.bank.pe.msbootcoin.dto.Account;
 import com.bank.pe.msbootcoin.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
