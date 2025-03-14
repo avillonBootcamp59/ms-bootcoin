@@ -22,32 +22,23 @@ public class SellerUserBcController {
 
     @GetMapping("/all")
     public Flux<SellerUser> getAll(){
-
-        logger.info("Mostrando la lista de los SellerUser de la bd");
         return sellerUserBcService.findAll();
     }
 
     @GetMapping("/{id}")
     public Mono<SellerUser> findTasasBC(@PathVariable String id){
-
-        logger.info("Buscando al SellerUser por el id: {}", id);
         return sellerUserBcService.findById(id);
     }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<SellerUser> save(@RequestBody SellerUser clientMono){
-
-        logger.info("Registrando al SellerUser en la bd");
         clientMono.setDateReg(LocalDate.now());
         return sellerUserBcService.save(clientMono);
     }
 
     @PutMapping("/{id}")
     public Mono<SellerUser> edit(@RequestBody SellerUser client, @PathVariable String id){
-
-        logger.info("Editando al SellerUser con el id: {}" ,id);
-
         return sellerUserBcService.findById(id).flatMap(c -> {
             c = client;
 

@@ -23,7 +23,6 @@ public class MaestroController {
 
     @GetMapping(value = "/sin/{userId}")
     public Maestro getById(@PathVariable("userId") Integer id) {
-        logger.info("Getting user with ID {}.", id);
         return maestroService.getUserId(id);
     }
 

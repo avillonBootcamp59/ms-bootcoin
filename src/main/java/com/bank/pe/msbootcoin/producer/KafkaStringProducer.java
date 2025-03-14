@@ -17,7 +17,7 @@ public class KafkaStringProducer {
     }
 
     public void sendMessage(BootCoin message) {
-        LOGGER.info("Produciendo mensaje BootCoin para usuario: {}", message.getIdCustomer());
+        LOGGER.info("Enviando mensaje para customer: {}", message.getIdCustomer());
         this.kafkaTemplate.send("bootcamp-Topic", message);
     }
 }
