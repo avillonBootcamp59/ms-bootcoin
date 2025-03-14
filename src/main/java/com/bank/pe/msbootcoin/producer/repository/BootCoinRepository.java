@@ -1,4 +1,4 @@
-package com.bank.pe.msbootcoin.producer.repository;
+package com.bank.pe.msbootcoin.repository;
 
 import com.bank.pe.msbootcoin.entity.BootCoin;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
